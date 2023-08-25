@@ -1,19 +1,15 @@
 const express = require('express');
 const axios = require('axios');
-require('dotenv').config();
-const accessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
-
-const express = require('express');
-const axios = require('axios');
-const security = require('./security'); // Import the security module
+const security = require('./security'); // Adjust the path to security.js
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Load environment variables
 require('dotenv').config();
 const encryptedAccessToken = process.env.INSTAGRAM_ENCRYPTED_TOKEN; // Encrypted token
 
-// ...
+// ... Set up static files and view engine ...
 
 app.get('/', async (req, res) => {
     try {
@@ -27,4 +23,6 @@ app.get('/', async (req, res) => {
     }
 });
 
-// ...
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
