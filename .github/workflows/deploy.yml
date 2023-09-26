@@ -21,6 +21,5 @@ jobs:
       - name: Install Dependencies
         run: npm install # Use 'yarn install' if you prefer Yarn  
 
-      - name: Deploy to Server
-        run: node server.js
+      
           
