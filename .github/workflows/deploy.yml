@@ -25,7 +25,7 @@ jobs:
         run: npm test # Modify this command to run your tests
 
       - name: Deploy to Server
-        run: node server.js
+        run: 
           # Add your deployment script here, e.g., deploying to a server or hosting platform
           # Example: ssh into a server and deploy using a script
           ssh user@your-server.com 'bash -s' < deploy.sh
