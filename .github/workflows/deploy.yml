@@ -11,21 +11,16 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set Up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14' # Adjust the Node.js version as needed
 
       - name: Install Dependencies
-        run: npm install # Use 'yarn install' if you prefer Yarn
-
-      - name: Build and Test
-        run: npm test # Modify this command to run your tests
+        run: npm install # Use 'yarn install' if you prefer Yarn  
 
       - name: Deploy to Server
-        run: 
-          # Add your deployment script here, e.g., deploying to a server or hosting platform
-          # Example: ssh into a server and deploy using a script
-          ssh user@your-server.com 'bash -s' < deploy.sh
+        run: node server.js
+          
