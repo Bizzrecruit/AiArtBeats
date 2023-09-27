@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach((image) => {
           const imgElement = document.createElement('img');
           imgElement.classList.add('image-thumbnail');
-          imgElement.dataset.src = `/images/${image}`;
+          imgElement.dataset.src = `./public/images/${image}`;
           gallery.appendChild(imgElement);
           observer.observe(imgElement); // Observe each image for visibility
         });
