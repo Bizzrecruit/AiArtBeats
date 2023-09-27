@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.use(express.static('public'));
+//app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 // Define a route to retrieve a list of images from the "public/images" folder
 app.get('/images', (req, res) => {
