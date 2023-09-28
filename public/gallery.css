@@ -1,0 +1,47 @@
+/* Container for the gallery */
+/* Center the container horizontally on the webpage */
+.container {
+    width: 100%; /* Automatically adjust to fill the webpage width */
+    margin: 10% auto 2% auto; /* Top: 10%, Right/Left: auto (center horizontally), Bottom: 2% */
+    padding: 0; /* Remove padding for horizontal centering */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    display: flex; /* Use flexbox to create columns */
+    flex-wrap: wrap; /* Allow content to wrap to the next line */
+    justify-content: space-between; /* Distribute columns evenly */
+    align-content: flex-start; /* Align columns to the top */
+    gap: 5px; /* Add a gap between images */
+  }
+  
+  /* Style for individual image thumbnails */
+  .image-thumbnail {
+    width: calc(12% - 10px); /* 33.33% width for each column with 10px gap between columns */
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-bottom: 10px; /* Add spacing between thumbnails */
+    display: inline-block; /* Display thumbnails in columns */
+    vertical-align: top; /* Align thumbnails to the top */
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    position: relative; /* Add relative positioning for image centering */
+  }
+  
+  /* Style for the actual images within the thumbnails */
+  .image-thumbnail img {
+    width: 100%; /* Allow images to adjust their width */
+    height: auto; /* Maintain aspect ratio and adjust height accordingly */
+    max-width: 100%; /* Ensure images don't exceed thumbnail width */
+    object-fit: contain; /* Maintain aspect ratio and fit within the thumbnail */
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%; /* Set a fixed width for mobile devices */
+      margin: 10% auto 2% auto; /* Adjust margin for smaller screens */
+    }
+  
+    .image-thumbnail {
+      width: calc(25% - 10px); /* Increase image width for mobile while maintaining gap */
+    }
+  }
+  
